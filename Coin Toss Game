@@ -1,0 +1,5 @@
+import random
+choice = input("Heads or Tails? ").lower()
+flip = random.choice(["heads", "tails"])
+print(f"Coin landed on {flip}")
+print("You win!" if choice == flip else "You lose!")
