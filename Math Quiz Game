@@ -1,0 +1,15 @@
+import random
+
+score = 0
+for i in range(5):   # 5 questions
+    a, b = random.randint(1, 10), random.randint(1, 10)
+    op = random.choice(['+', '-', '*'])
+    ans = eval(f"{a}{op}{b}")
+    user = int(input(f"{a} {op} {b} = "))
+    if user == ans:
+        print("✅ Correct!")
+        score += 1
+    else:
+        print("❌ Wrong! Answer:", ans)
+
+print("Your Score:", score, "/ 5")
