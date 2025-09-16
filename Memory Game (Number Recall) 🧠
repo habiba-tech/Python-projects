@@ -1,0 +1,16 @@
+import random, time
+
+print("🧠 Memory Game 🧠")
+nums = [random.randint(1, 50) for _ in range(5)]
+print("Remember these numbers:", nums)
+time.sleep(3)   # wait 3 seconds
+print("\n" * 20)  # clear screen effect
+
+guess = input("Enter the numbers you remember (space-separated): ")
+guess_list = list(map(int, guess.split()))
+
+print("Original:", nums)
+print("Yours   :", guess_list)
+
+score = sum(1 for x, y in zip(nums, guess_list) if x == y)
+print("Your Score:", score, "/", len(nums))
