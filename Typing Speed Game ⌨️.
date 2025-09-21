@@ -1,0 +1,19 @@
+import time
+import random
+
+words = ["python", "game", "speed", "typing", "keyboard", "challenge"]
+
+print("=== Typing Speed Game ===")
+word = random.choice(words)   # pick random word
+print("Type this word:", word)
+
+start = time.time()
+typed = input("Your input: ")
+end = time.time()
+
+if typed == word:
+    print("✅ Correct!")
+else:
+    print("❌ Wrong! The word was:", word)
+
+print("⏱️ Time taken:", round(end - start, 2), "seconds")
