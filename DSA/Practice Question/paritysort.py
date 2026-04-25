@@ -1,5 +1,5 @@
 #sort array by parity 
-nums=[5,2,1,4,3,7,8,9]
+nums=[5,2,1,4,3,7,8,5,9]
 n=len(nums) 
 start =0
 for i in range (n):
